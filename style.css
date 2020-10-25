@@ -43,12 +43,11 @@ body {
 	position: relative;
 }
 
-.navbar {
-  /* border: 2px solid limegreen; */
+a {
+  cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🦁</text></svg>") 16 0,auto; /*!emojicursor.app*/
 }
 
-
-  a:link {
+  a.homepage:link {
     color: #87c7a8;
     background-color: transparent;
     padding: 10px 10px 10px 10px;
@@ -56,29 +55,20 @@ body {
     text-decoration: none;
   }
 
-  a:visited {
+  a.homepage:visited {
     color: #87c7a8;
     padding: 10px 10px 10px 10px;
     background-color: transparent;
     text-decoration: none;
   }
 
-  a:hover {
+  a.homepage:hover, a.homepage:active {
     color: #87c7a8;
     padding: 10px 10px 10px 10px;
     border-style: solid;
     border-width: 2px;
     border-color: #87c7a8;
   }
-
-  a:active {
-    color: #87c7a8;
-    padding: 10px 10px 10px 10px;
-    border-style: solid;
-    border-width: 2px;
-    border-color: #87c7a8;
-  }
-
 
 #team {
   position: absolute;
@@ -104,22 +94,85 @@ body {
   right: 50px;
 }
 
-.navbar-pages {
-  color: black;
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
-}
 
 /* ABOUT PAGE CSS */
 
+.navbar-pages {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
 .about-page {
-  background-image: url('assets/about.png');
-  /* Need to figure out how to make the background image full page */
-  background-position: center;
+  background-image: url('memories/about.png');
+  background-position: center center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
 }
+
+a.aboutpage {
+  text-align: center;
+  display: table;
+  padding: 10px 10px;
+}
+
+a.aboutpage:link {
+  color: black;
+  background-color: transparent;
+  border: 3px;
+  text-decoration: none;
+}
+
+a.aboutpage:visited {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a.aboutpage:active, a.aboutpage:hover {
+  color: black;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #black;
+}
+
+.aboutleon {
+  border: 3px solid black;
+  background-color: white;
+  height: auto;
+  padding: 50px;
+  text-transform: none;
+  color: black;
+  font-size: 20px;
+  font-family: "Courier New", Courier;
+}
+
+.banner-1 {
+  position: absolute;
+  top: 0%;
+  left: 40%;
+  width: 15%;
+}
+
+.banner-2 {
+  position: absolute;
+  top: 20%;
+  left: 60%;
+  width: 40%;
+}
+
+.leon-banner {
+  border: 3px solid black;
+  background-color: #87c7a8;
+  font-size: 1em;
+  color: black;
+  position: absolute;
+  top: 45%;
+  left: 70%;
+  width:40%;
+  height: auto;
+}
+
 
 /* minimum viable way of making a website mobile friendly */
 @media only screen and (max-width: 600px) {
